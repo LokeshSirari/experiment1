@@ -1,0 +1,34 @@
+<div class="container">
+        <h2>Customer List</h2>    
+        <input type="text" name="search" [(ngModel)]="searchdata">
+        <button type="button" (click)="search()" >Search</button>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Lastname</th>
+              <th>Firstname</th>
+              <th>Email</th>
+              <th>Is Active?</th>
+              <th>Date Created</th>
+              <th>Date Updated</th>
+             </tr>
+            </thead>
+            
+            <tbody>
+                     
+                    <tr *ngFor="let customer of customerList">
+                      <td>{{customer.id}}</td>
+                      <td>{{customer.lastname}}</td>
+                      <td>{{customer.firstname}}</td>
+                      <td>{{customer.email}}</td>
+                      <td>{{customer.isActive}}</td>
+                      <td>{{customer.dateCreated}}</td>
+                      <td>{{customer.dateUpdated}}</td>
+                    </tr>
+                    
+                
+                </tbody>
+            
+          </table>
+          </div>
